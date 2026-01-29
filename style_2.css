@@ -1,0 +1,362 @@
+/* ============================================================
+   GLOBAL RESET
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f8f8f8;
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background: #f8f8f8;
+    flex-wrap: wrap;
+}
+
+#logo img {
+    height: 80px;
+}
+
+#menu-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#menu-bar ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #logo img {
+        height: 70px;
+    }
+
+    #menu-bar ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+
+/* ============================================================
+   SCROLL LINE
+   ============================================================ */
+.scroll-line {
+    width: 100%;
+    background: #004aad;
+    color: white;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.scroll-line p {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 18s linear infinite;
+}
+
+.scroll-line:hover p {
+    animation-play-state: paused;
+}
+
+.scroll-line p a {
+    display: inline;
+}
+
+
+
+/* Blink effect */
+.blink {
+    color: yellow;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+/* Stop blinking on hover */
+.blink:hover {
+    animation-play-state: paused;
+}
+
+/* Underline on hover for clarity */
+.blink:hover {
+    text-decoration: underline;
+}
+
+/* KEYFRAMES */
+@keyframes marquee {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes blink {
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+
+/* ============================================================
+   ABOUT US SECTION
+   ============================================================ */
+#about_us {
+    width: 84%;
+    margin: 40px auto;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+#about_us ul {
+    list-style: none;
+    /* removes bullets */
+    padding-left: 0;
+    /* removes left spacing */
+}
+
+#about_us ul li {
+    margin: 8px 0;
+    /* spacing between lines */
+    text-align: center;
+    /* centers the text */
+    font-size: 18px;
+}
+
+
+#about_us img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.h-primary {
+    font-size: 50px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.h-secondary {
+    font-size: 32px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .h-primary {
+        font-size: 32px;
+    }
+
+    .h-secondary {
+        font-size: 24px;
+    }
+
+    #about_us {
+        font-size: 16px;
+    }
+}
+
+/* ============================================================
+   SERVICES (Cards)
+   ============================================================ */
+/* SERVICES (Cards) */
+#services {
+    margin: 34px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* Each Card Box */
+#services .box {
+    width: 300px;
+    background: #f2f2f2;
+    border-radius: 20px;
+    padding: 25px;
+    border: 2px solid brown;
+}
+
+/* Fix UL — Remove bullets */
+#services .box ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* Fix LI spacing + left alignment */
+#services .box ul li {
+    padding: 5px 0;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Card Image */
+#services .box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #services .box {
+        width: 90%;
+    }
+}
+
+
+/* ============================================================
+   APPLY BUTTON
+   ============================================================ */
+.apply {
+    padding: 15px 35px;
+    background: #0057d9;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    margin: 20px auto;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+
+.apply:hover {
+    box-shadow: 0 0 15px #0057d9;
+    transform: scale(1.05);
+}
+
+/* ============================================================
+   PLACEMENT SECTION – INFINITE SLIDER (FIXED)
+   ============================================================ */
+#Placement {
+    text-align: center;
+    padding: 20px;
+}
+
+.logos {
+    width: 100%;
+    overflow: hidden;
+    background: white;
+}
+
+.logos-slide {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+
+.logos-slide img {
+    height: 150px;
+    flex-shrink: 0;
+}
+
+/* Duplicate effect – no blank space */
+.logos-slide:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Mobile logos */
+@media (max-width: 768px) {
+    .logos-slide img {
+        height: 110px;
+        margin-right: 20px;
+    }
+}
+
+/* ============================================================
+   CONTACT SECTION
+   ============================================================ */
+#contact {
+    text-align: center;
+}
+
+#contact #services .box {
+    width: 350px;
+    border-radius: 15px;
+}
+
+#contact table {
+    width: 100%;
+}
+
+#contact td,
+#contact th {
+    padding: 10px;
+    font-size: 17px;
+}
+
+@media (max-width: 768px) {
+    #contact #services .box {
+        width: 95%;
+    }
+
+    #contact td {
+        font-size: 15px;
+    }
+}
+
+/* ============================================================
+   FORM PAGE
+   ============================================================ */
+form table {
+    width: 90%;
+}
+
+@media (max-width: 768px) {
+    form table {
+        width: 100%;
+    }
+
+    form input,
+    form textarea,
+    form select {
+        width: 100%;
+    }
+}
+
+/* ============================================================
+   ADMISSIONS HEADER FIX
+   ============================================================ */
+#admissions {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+

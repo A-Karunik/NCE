@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form - NCE</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f8f8;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #004aad;
+        }
+
+        table {
+            margin: auto;
+            width: 60%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 12px;
+            font-size: 18px;
+            border: none;
+            /* No borders */
+        }
+
+        input,
+        textarea,
+        select {
+            width: 95%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 12px;
+            background: #004aad;
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .submit-btn:hover {
+            background: #003580;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Admission Form</h1>
+
+    <form onsubmit="return showMessage()">
+
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" required></td>
+            </tr>
+
+            <tr>
+                <td>10+2 with PCM:</td>
+                <td>
+                    <select required>
+                        <option value="">Select</option>
+                        <option>Pass</option>
+                        <option>Fail</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Father Name:</td>
+                <td><input type="text" required></td>
+            </tr>
+
+            <tr>
+                <td>Father Occupation:</td>
+                <td><input type="text" required></td>
+            </tr>
+
+            <tr>
+                <td>Mother Name:</td>
+                <td><input type="text" required></td>
+            </tr>
+
+            <tr>
+                <td>Mother Occupation:</td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Address:</td>
+                <td><textarea rows="3" required></textarea></td>
+            </tr>
+
+            <tr>
+                <td>Do you want Hostel?</td>
+                <td>
+                    <select required>
+                        <option value="">Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Phone No:</td>
+                <td><input type="tel" required></td>
+            </tr>
+
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" required></td>
+            </tr>
+        </table>
+
+        <button class="submit-btn" type="submit">Submit</button>
+    </form>
+
+    <script>
+        function showMessage() {
+
+            function showMessage() {
+                alert("Details have been sent to your email. Our admission counselor will contact you soon.");
+                return true; 
+            }
+
+
+        }
+    </script>
+
+</body>
+
+</html>
